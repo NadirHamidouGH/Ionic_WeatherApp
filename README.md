@@ -1,6 +1,6 @@
 # Ionic_WeatherApp
 
-This is a user interface for responsive website created using Ionic with Angular for learning purposes
+This is a user interface for responsive website created using Ionic with Angular and a weather API : api.weatherstack.com for learning purposes
 
 Screenshots : 
 1 :
