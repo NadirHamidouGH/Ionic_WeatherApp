@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Weather 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home">
+    <!-- <ion-card class="welcome-card">
+      <img src="/assets/shapes.svg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>Get Started</ion-card-subtitle>
+        <ion-card-title>Welcome to Ionic</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      </ion-card-content>
+    </ion-card> -->
+   
+    <ion-grid *ngIf="weather">
+      <ion-row>
+        <ion-col >
+
+          <div>
+                    <h4 class="location"> {{ weather.location.name }} </h4>
+                    <h4 class="tmp">  {{ weather.current.temperature}}c</h4>
+                    <div class="img">
+                        <img src={{weather.current.weather_icons}} width="60px" />
+                    </div>
+          </div>
+           <h5 class="label">  {{ weather.weather_descriptions}}  </h5> 
+
+    <ion-card class="welcome-card" >
+        <ion-card-content>
+          <ion-list class="item">
+            <ion-item >
+              <strong>Country :  </strong>   {{ weather.location.country }} 
+            </ion-item>
+          </ion-list>
+
+          <ion-list class="item">
+              <ion-item>
+                <strong>Wind :  </strong>   {{ weather.current.wind_kph }} Kph  {{ weather.current.wind_dir }}
+              </ion-item>
+            </ion-list>
+
+            <ion-list class="item">
+                <ion-item>
+                  <strong>Time :  </strong>   {{ weather.location.localtime }}
+                </ion-item>
+              </ion-list>
+
+              <ion-list class="item">
+                  <ion-item>
+                    <strong>Humidity :  </strong>    {{ weather.current.humidity }}%
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+        </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
